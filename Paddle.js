@@ -1,37 +1,35 @@
 const SPEED=0.02
 
-export default class Paddle{
-    constructor(paddleElem)
-    {
-        this.paddleElem=paddleElem
-        this.reset()
+export default class Paddle {
+  constructor(paddleElem) {
+    this.paddleElem = paddleElem;
+    this.reset();
+  }
 
-    }
+  //this is the commented line
 
-    //this is the commented line
-    
-    get position()
-    {
-        return parseFloat(getComputedStyle(this.paddleElem).getPropertyValue("--position"))
-    }
+  get position() {
+    return parseFloat(
+      getComputedStyle(this.paddleElem).getPropertyValue("--position")
+    );
+  }
 
-    set position(value){
-        this.paddleElem.style.setProperty("--position",value)
-    }
+  //this is the commented line
 
-    rect()
-    {
-        return this.paddleElem.getBoundingClientRect()
-    }
+  set position(value) {
+    this.paddleElem.style.setProperty("--position", value);
+  }
 
-    reset()
-    {
-        this.position=50
-    }
+  rect() {
+    return this.paddleElem.getBoundingClientRect();
+  }
 
-    update(delta,ballHeight)
-    {
-        this.position+= SPEED * delta * (ballHeight-this.position)
-    }
+  reset() {
+    this.position = 50;
+  }
+
+  update(delta, ballHeight) {
+    this.position += SPEED * delta * (ballHeight - this.position);
+  }
 }
 
