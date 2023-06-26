@@ -7,6 +7,8 @@ export default class Paddle{
         this.reset()
 
     }
+
+    //this is the commented line
     
     get position()
     {
