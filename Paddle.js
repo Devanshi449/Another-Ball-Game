@@ -17,19 +17,19 @@ export default class Paddle {
   //this is the commented line
 
   set position(value){
-    this.paddleElem.style.setProperty("--position", value);
+    this.paddleElem.style.setProperty(" --position", value);
   }
 
-  rect() {
+  rect(){
     return this.paddleElem.getBoundingClientRect();
   }
 
-  reset() {
+  reset(){
     this.position = 50;
   }
 
   update(delta, ballHeight) {
-    this.position += SPEED * delta * (ballHeight - this.position);
+    this.position += SPEED * delta*(ballHeight - this.position);
   }
 }
 
