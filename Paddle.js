@@ -8,7 +8,7 @@ export default class Paddle {
 
   //this is the commented line
 
-  get position() {
+  get position(){
     return parseFloat(
       getComputedStyle(this.paddleElem).getPropertyValue("--position")
     );
