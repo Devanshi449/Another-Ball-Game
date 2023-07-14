@@ -10,14 +10,12 @@ const computerScoreElem=document.getElementById("computer-score")
 
 let lasttime
 function update(time){ 
-    // console.log(time);
     if(lasttime!=null)
     {
         const delta=time-lasttime
         ball.update(delta,[playerPaddle.rect(),computerPaddle.rect()])
         computerPaddle.update(delta,ball.y)
         const hue=parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--hue"))
-        // console.log(delta)
         document.documentElement.style.setProperty("--hue",hue+delta*0.01)
 
         if(isLose())
@@ -40,7 +38,6 @@ function handleLose(){
     const rect=ball.rect();
     if (rect.right>=window.innerWidth) {
         playerScoreElem.textContent=parseInt(playerScoreElem.textContent)+1
-        // console.log("playerScoreElem")
     }
     else{
         computerScoreElem.textContent=parseInt(computerScoreElem.textContent)+1
