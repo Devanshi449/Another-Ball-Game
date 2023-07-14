@@ -16,7 +16,7 @@ export default class Paddle {
 
   //this is the commented line
 
-  set position(value) {
+  set position(value){
     this.paddleElem.style.setProperty("--position", value);
   }
 
