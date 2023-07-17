@@ -8,7 +8,7 @@ const playerScoreElem=document.getElementById("player-score")
 const computerScoreElem=document.getElementById("computer-score")
 
 
-let lasttime
+let lasttime;
 function update(time){ 
     if(lasttime!=null)
     {
@@ -23,6 +23,7 @@ function update(time){
             handleLose()
         }
     }
+    
 
     lasttime=time
     window.requestAnimationFrame(update)
